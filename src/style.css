@@ -1,0 +1,125 @@
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menubar {
+  display: flex;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #e9edf2;
+  border-bottom: 1px solid #d4dae3;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.menu-btn:hover { background: #dde4ec; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  background: #f7f9fb;
+  border-bottom: 1px solid #d4dae3;
+}
+
+.toolbar button {
+  padding: 5px 12px;
+  font-size: 13px;
+  border: 1px solid #c9d2dc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.toolbar button:hover { background: #eef3f8; }
+.toolbar button.active {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+}
+
+.color-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border: 1px solid #c9d2dc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+.color-wrap input[type='color'] {
+  width: 30px;
+  height: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sep {
+  width: 1px;
+  height: 22px;
+  background: #d4dae3;
+  margin: 0 4px;
+}
+
+.canvas-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+  margin: 8px;
+  border: 1px solid #d4dae3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pad {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.hint {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #8a94a3;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.statusbar {
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #444;
+  background: #e9edf2;
+  border-top: 1px solid #d4dae3;
+}
